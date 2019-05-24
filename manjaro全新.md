@@ -107,3 +107,8 @@ sudo ntpdate 1.cn.pool.ntp.org
 
 sudo pacman -S net-tools
 ```
+
+## 1.5 VIM软件安装
+
+nvim 配置文件`~/.config/nvim/init.vim`
+nvim 的coc配置文件`~/.config/nvim/coc-settings.json`

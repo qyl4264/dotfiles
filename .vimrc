@@ -26,6 +26,7 @@ Plug 'ianva/vim-youdao-translater', { 'on': [] }
 "Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'majutsushi/tagbar'
+"Plug 'sillybun/autoformatpythonstatement', {'do': './install.sh'}
 call plug#end()
 
 
@@ -50,7 +51,13 @@ endfunction
     set number  "显示行号
     set encoding=utf-8 "编码
     set fenc=utf-8 "编码
-    set t_Co=256 " 256 颜色
+    "set t_Co=256 " 256 颜色
+    set termguicolors
+    if &term =~# '^screen'
+        let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+        let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    endif
+
     set nobackup
     set nowritebackup
     set updatetime=100

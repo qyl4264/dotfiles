@@ -8,7 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'yonchu/accelerated-smooth-scroll' , { 'on': [] }
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
-"Plug 'kien/rainbow_parentheses.vim' 
+Plug 'kien/rainbow_parentheses.vim' 
 
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 "Plug 'vim-scripts/fcitx.vim'
@@ -22,10 +22,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'ianva/vim-youdao-translater', { 'on': [] }
-"Plug 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold', { 'on': [] }
 "Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-repeat', { 'on': [] }
+Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle'] }
 "Plug 'sillybun/autoformatpythonstatement', {'do': './install.sh'}
 call plug#end()
 
@@ -40,6 +41,8 @@ function! LoadPlug(timer) abort
   "call plug#load('auto-pairs')
   call plug#load('accelerated-smooth-scroll')
   call plug#load('fzf.vim')
+  call plug#load('vim-repeat')
+  call plug#load('SimpylFold')
 
 endfunction
 
@@ -152,6 +155,14 @@ endfunction
         nnoremap <silent> <leader>A :Ag<cr>
     "}
 
+    " rainbow_parentheses {
+        let g:rbpt_max = 16
+        let g:rbpt_loadcmd_toggle = 0
+        au VimEnter * RainbowParenthesesToggle
+        au Syntax * RainbowParenthesesLoadRound
+        au Syntax * RainbowParenthesesLoadSquare
+        au Syntax * RainbowParenthesesLoadBraces
+    " }
    
     " NERDTree {
         map <C-e> :NERDTreeToggle<cr> 
@@ -184,6 +195,8 @@ endfunction
                     \ 'coc-highlight']
         
 
+        nmap <silent> [d <Plug>(coc-diagnostic-prev)
+        nmap <silent> ]d <Plug>(coc-diagnostic-next)
         "inoremap <silent><expr> <TAB>
         "\ pumvisible() ? coc#_select_confirm() :
         "\ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
@@ -200,10 +213,31 @@ endfunction
 
         let g:coc_snippet_next = '<tab>'
         let g:coc_snippet_prev = '<S-tab>'
-        let g:coc_status_error_sign = '✘:'
-        let g:coc_status_warning_sign = '¿:'
+        "let g:coc_status_error_sign = '✘:'
+        "let g:coc_status_warning_sign = '¿:'
+        "let g:coc_status_error_sign = '🚫:'
+        "let g:coc_status_warning_sign = '❗:'
+        "🌚🌝😑😏😛😶🙃🙄😒🤐🤗🤺🤯
+        let g:coc_status_error_sign = '💉:'
+        let g:coc_status_warning_sign = '💊:'
 
         let g:coc_force_debug = 1
+
+        " Use K to show documentation in preview window
+        nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+        function! s:show_documentation()
+            if (index(['vim','help'], &filetype) >= 0)
+              execute 'h '.expand('<cword>')
+            else
+              call CocAction('doHover')
+            endif
+        endfunction
+
+        " Using CocList
+        " Show all diagnostics
+        nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
+
         imap <C-l> <Plug>(coc-snippets-expand)
         nmap <leader>rn <Plug>(coc-rename)
         nmap <silent> gd <Plug>(coc-definition)

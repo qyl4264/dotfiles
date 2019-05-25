@@ -112,3 +112,6 @@ sudo pacman -S net-tools
 
 nvim 配置文件`~/.config/nvim/init.vim`
 nvim 的coc配置文件`~/.config/nvim/coc-settings.json`
+
+## 1.6 TMUX插件安装
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`

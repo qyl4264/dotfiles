@@ -215,9 +215,7 @@ endfunction
         let g:coc_snippet_prev = '<S-tab>'
         "let g:coc_status_error_sign = '✘:'
         "let g:coc_status_warning_sign = '¿:'
-        "let g:coc_status_error_sign = '🚫:'
-        "let g:coc_status_warning_sign = '❗:'
-        "🌚🌝😑😏😛😶🙃🙄😒🤐🤗🤺🤯
+        "🌚🌝😑😏😛😶🙃🙄😒🤐🤗🤺🤯🚫❗
         let g:coc_status_error_sign = '💉:'
         let g:coc_status_warning_sign = '💊:'
 

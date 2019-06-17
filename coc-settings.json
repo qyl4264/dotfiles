@@ -9,5 +9,12 @@
     "python.analysis.information": [],
     "suggest.enablePreview": true,
     "diagnostic.checkCurrentLine": true,
-    "suggest.snippetIndicator": "  ฅ՞•ﻌ•՞ฅ"
+    "suggest.snippetIndicator": "  ฅ՞•ﻌ•՞ฅ",
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"]
+        }
+    }
 }

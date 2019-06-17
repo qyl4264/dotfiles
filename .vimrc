@@ -116,8 +116,15 @@ endfunction
     nnoremap j gj
     nnoremap gj j
 
+    vnoremap k gk
+    vnoremap gk k
+    vnoremap j gj
+    vnoremap gj j
+
+
     "一键运行代码
     map <F5> :call CompileRunGcc()<CR>
+    nnoremap <leader>jj :call CompileRunGcc()<CR>
         func! CompileRunGcc()
             exec "w"
     if &filetype == 'c'

@@ -199,7 +199,7 @@ endfunction
     " }
    
     " NERDTree {
-        map <C-e> :NERDTreeToggle<cr> 
+        "map <C-e> :NERDTreeToggle<cr> 
         nnoremap <leader>e :NERDTreeToggle<cr>
         nnoremap <leader>ie :NERDTree %<cr>
         let NERDTreeIgnore=['\$', '\.py[cd]$', '\.sw[op]$', '^\.git$', '^\.hg$']
@@ -227,7 +227,7 @@ endfunction
         inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
         let g:coc_global_extensions = ['coc-python', 'coc-snippets', 'coc-json', 
-                    \ 'coc-highlight']
+                    \ 'coc-highlight', 'coc-tsserver', 'coc-tslint-plugin']
         
 
         nmap <silent> [d <Plug>(coc-diagnostic-prev)

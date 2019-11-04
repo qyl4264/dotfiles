@@ -25,6 +25,7 @@ Plug 'ianva/vim-youdao-translater', { 'on': [] }
 Plug 'tmhedberg/SimpylFold', { 'on': [] }
 "Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'tpope/vim-repeat', { 'on': [] }
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle'] }
 "Plug 'sillybun/autoformatpythonstatement', {'do': './install.sh'}
@@ -100,7 +101,7 @@ endfunction
     "let g:python_host_prog = '/usr/bin/python'
     "let g:python3_host_skip_check=1
     "let g:python3_host_prog = '/usr/bin/python3'
-
+    autocmd Filetype json :IndentLinesDisable
 
 
 " }

@@ -16,5 +16,6 @@
             "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
             "filetypes": ["go"]
         }
-    }
+    },
+    "emmet.includeLanguages": {"javascript": "javascriptreact"}
 }

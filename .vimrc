@@ -23,12 +23,14 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 Plug 'ianva/vim-youdao-translater', { 'on': [] }
 Plug 'tmhedberg/SimpylFold', { 'on': [] }
-"Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 "Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'tpope/vim-repeat', { 'on': [] }
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle'] }
 "Plug 'sillybun/autoformatpythonstatement', {'do': './install.sh'}
+Plug 'heavenshell/vim-pydocstring'
+"Plug 'heavenshell/vim-pydocstring', {'for':['python']}
 call plug#end()
 
 
@@ -217,6 +219,10 @@ endfunction
     " indentline {
         let g:indentLine_char_list = ['|', '¦', '┆', '┊']
         let g:indentLine_color_term = 239
+    " }
+    
+    " pydocstring {
+        nmap <silent><leader>ps <Plug>(pydocstring)
     " }
     
     "coc {

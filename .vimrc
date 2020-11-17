@@ -113,7 +113,11 @@ endfunction
     nnoremap <C-K> <C-W>k
     nnoremap <C-L> <C-W>l
     nnoremap <C-H> <C-W>h
-    
+
+    nmap <C-S> :w<CR>
+
+    imap <C-S> <Esc>:w<CR>i
+        
     nnoremap k gk
     nnoremap gk k
     nnoremap j gj

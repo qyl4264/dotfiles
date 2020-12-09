@@ -222,7 +222,7 @@ endfunction
         let NERDTreeShowHidden=1
         let NERDTreeKeepTreeInNewTab=1
     " }
-    
+
     " indentline {
         let g:indentLine_char_list = ['|', '¦', '┆', '┊']
         let g:indentLine_color_term = 239
@@ -230,6 +230,7 @@ endfunction
     
     " pydocstring {
         nmap <silent><leader>ps <Plug>(pydocstring)
+        let g:pydocstring_formatter = 'google'
     " }
     
     "coc {

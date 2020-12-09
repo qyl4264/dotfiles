@@ -87,7 +87,7 @@ endfunction
     set signcolumn=yes
     set background=dark
     set langmenu=zh_CN.UTF-8
-    "set tabstop=4 " 制表符为4
+    set tabstop=4 " 制表符为4
     set softtabstop=4 " 统一缩进为4
     set shiftwidth=4 " 统一缩进为4
     set expandtab
@@ -172,6 +172,9 @@ endfunction
         nnoremap <silent> <leader>yd :<C-u>Ydc<CR>
     " }
     
+    "
+    
+    ""
     " tagbar{
         nnoremap <silent> <leader>tb :TagbarToggle<CR>  
         let g:tagbar_left = 1 
@@ -180,8 +183,8 @@ endfunction
         let g:tagbar_sort = 0         
     " }
     " markdown-preview{
-        nnoremap <leader>mp :MarkdownPreview<cr>
-        nnoremap <leader>mc :MarkdownPreviewStop<cr>
+        "nnoremap <leader>mp :MarkdownPreview<cr>
+        "nnoremap <leader>mc :MarkdownPreviewStop<cr>
     " }
     "fzf {
         nnoremap <silent> <Leader>f :Files<cr>

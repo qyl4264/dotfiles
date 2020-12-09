@@ -107,3 +107,10 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 
 alias tmux="tmux -2"
+#alias docker-compose="'"'docker run -v /var/run/docker.sock:/var/run/docker.sock -v /data/share:/rootfs//data/share -w=/rootfs//data/share docker/compose'"'"
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+
+export GO111MODULE=on
+export GOPROXY=https://goproxy.cn

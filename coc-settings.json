@@ -10,5 +10,12 @@
     "suggest.enablePreview": true,
     "diagnostic.checkCurrentLine": true,
     "suggest.snippetIndicator": "  ฅ՞•ﻌ•՞ฅ",
-    "emmet.includeLanguages": {"javascript": "javascriptreact"}
+    "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
+    "languageserver": {
+        "dockerfile": {
+        "command": "docker-langserver",
+        "filetypes": ["dockerfile"],
+        "args": ["--stdio"]
+  }
+}
 }

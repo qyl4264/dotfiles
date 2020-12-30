@@ -105,6 +105,7 @@ endfunction
     "let g:python3_host_prog = '/usr/bin/python3'
     autocmd Filetype json :IndentLinesDisable
 
+    autocmd Filetype yaml setlocal sw=2 ts=2 et ai
 
 " }
 " KeyMap {
@@ -242,7 +243,7 @@ endfunction
         inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
         let g:coc_global_extensions = ['coc-python', 'coc-snippets', 'coc-json', 
-                    \ 'coc-highlight', 'coc-tsserver', 'coc-tslint-plugin']
+                    \ 'coc-highlight', 'coc-tsserver', 'coc-tslint-plugin', 'coc-emmet']
         
 
         nmap <silent> [d <Plug>(coc-diagnostic-prev)

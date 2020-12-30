@@ -1,0 +1,37 @@
+git zsh tmux tree cmake 
+jedi isort autopep8 neovim
+
+
+# pyenv 
+https://github.com/pyenv/pyenv/wiki
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+
+# ohmyzsh
+# 查询 raw.github.com https://www.ipaddress.com/
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+# vim-plug
+# https://github.com/junegunn/vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# tpm
+# https://github.com/tmux-plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# coc.nvim
+# https://github.com/neoclide/coc.nvim
+#
+curl -sL install-node.now.sh/lts | sudo bash
+
+# neovim
+# https://github.com/neovim/neovim
+# https://github.com/neovim/neovim/wiki/Building-Neovim 有编译安装步骤与所需条件
+sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip
+cd neovim
+make CMAKE_BUILD_TYPE=Release
+sudo make install

@@ -114,3 +114,5 @@ export PATH=$PATH:$GOROOT/bin
 
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
